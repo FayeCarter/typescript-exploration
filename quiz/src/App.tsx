@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import QuestionCard from './components/QuestionCard';
 import { fetchQuizQuestions, Difficulty, QuestionState } from './API';
 
-type AnswerObject = {
+export type AnswerObject = {
   question: string;
   answer: string;
   correct: boolean;
@@ -70,7 +70,7 @@ const App = () => {
         </button>
         ) : null
       }
-      {!gameOver ? <p className="score">Score: </p> : null }
+      {!gameOver ? <p className="score">Score: { score }</p> : null }
       { loading && <p>Loading Quesions ...</p> }
       {!loading && !gameOver && (
         <QuestionCard 
