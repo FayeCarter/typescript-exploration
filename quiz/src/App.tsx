@@ -2,7 +2,7 @@ import React from 'react';
 //Components
 import QuestionCard from './components/QuestionCard';
 
-function App = () => {
+const App = () => {
 
   const startTrivia = async () => {
 
